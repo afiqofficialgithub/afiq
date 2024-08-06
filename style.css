@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+[data-theme="dark"] {
+    --body-color: #1e1e1e;
+    --sidebar-color: #2e2e2e;
+    --primary-color: #BB86FC;
+    --primary-color-light: #3700B3;
+    --toggle-color: #121212;
+    --text-color: #FFFFFF;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-color);
+    height: 100%;
+    width: 100%;
+    transition: var(--tran-05);
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--sidebar-color);
+    padding: 15px;
+    transition: var(--tran-05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px 0 0 15px;
+}
+
+.sidebar.closed {
+    width: 80px;
+}
+
+.sidebar .image img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.sidebar header .image {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .texts {
+    margin-left: 10px;
+}
+
+.sidebar .log-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, rgba(105,92,254,1) 0%, rgba(129,202,244,1) 50%, rgba(105,92,254,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 3s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header.image.text {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar.closed .log-name {
+    display: none;
+}
+
+.sidebar header .arr {
+    display: flex;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    margin-left: 220px;
+    background-color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 1px;
+    cursor: pointer;
+    transition: var(--tran-05);
+    top: 20px;
+    color: white;
+}
+
+.sidebar.closed .arr {
+    transform: rotate(180deg);
+    margin-left: 50px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+    position: fixed;
+    top: 100px;
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.sidebar li .icon {
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transition: var(--tran-04);
+    color: var(--text-color);
+}
+
+.sidebar li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.sidebar li .text {
+    font-size: 20px;
+    transition: var(--tran-04);
+}
+
+.sidebar.closed .text {
+    display: none;
+}
+
+.sidebar.closed .icon {
+    margin-left: 10px;
+}
+
+.animated-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--tran-04);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animated-button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.animated-button .icon {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.theme-toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--tran-04);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-button .icon {
+    font-size: 25px;
+    margin-right: 10px;
+}

@@ -1,11 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="icon_path" type="image/icon type">
-<title></title>
+
+    <!-- Start of Async Drift Code -->
+<script>
+"use strict";
+
+!function() {
+  var t = window.driftt = window.drift = window.driftt || [];
+  if (!t.init) {
+    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+    t.factory = function(e) {
+      return function() {
+        var n = Array.prototype.slice.call(arguments);
+        return n.unshift(e), t.push(n), t;
+      };
+    }, t.methods.forEach(function(e) {
+      t[e] = t.factory(e);
+    }), t.load = function(t) {
+      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+      var i = document.getElementsByTagName("script")[0];
+      i.parentNode.insertBefore(o, i);
+    };
+  }
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('hvbsskdzsxsf');
+</script>
+<!-- End of Async Drift Code -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" href="icon_path" type="image/icon type">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Sidebar Navigation</title>
 </head>
 <body>
-
+    <nav class="sidebar">
+        <header>
+            <div class="image">
+                <span class="img">
+                    <img src="./img/image.png" alt="logo">
+                </span>
+                <div class="texts">
+                    <span class="log-name">AFIQ CODING LAB</span>
+                </div>
+            </div>
+            <i class='bx bx-chevrons-right arr' id="toggle-btn"></i>
+        </header>
+        <div class="menu-list">
+            <div class="menu">
+                <ul class="menu-link">
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text">HOME</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bxs-user-detail icon'></i>
+                            <span class="text">ABOUT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-laptop icon'></i>
+                            <span class="text">SKILL</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-file-blank icon'></i>
+                            <span class="text">PROJECT</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-envelope icon'></i>
+                            <span class="text">CONTACT</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <button class="theme-toggle-button" id="theme-toggle-btn">
+            <i class='bx bx-moon icon'></i>
+            <span class="text">Dark Mode</span>
+        </button>
+    </nav>
+    <script src="script.js"></script>
 </body>
 </html>
