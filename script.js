@@ -18,6 +18,19 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+document.getElementById('toggle-btn').addEventListener('click', function() {
+    document.querySelector('.sidebar').classList.toggle('closed');
+});
+
+document.getElementById('theme-toggle-btn').addEventListener('click', function() {
+    document.body.toggleAttribute('data-theme', 'dark');
+});
+
+document.getElementById('live-chat-btn').addEventListener('click', function() {
+    if (typeof drift !== 'undefined') {
+        drift.show(); // Show Drift chat widget
+    }
+});
 
 
 
