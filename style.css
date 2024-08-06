@@ -236,3 +236,13 @@ header.image.text {
 .live-chat-button .icon {
     font-size: 25px;
 }
+
+.content {
+    margin-left: 260px;
+    padding: 20px;
+    transition: var(--tran-05);
+}
+
+.sidebar.closed ~ .content {
+    margin-left: 90px;
+}

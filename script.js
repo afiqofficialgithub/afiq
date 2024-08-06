@@ -18,20 +18,28 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-document.getElementById('toggle-btn').addEventListener('click', function() {
-    document.querySelector('.sidebar').classList.toggle('closed');
-});
 
-document.getElementById('theme-toggle-btn').addEventListener('click', function() {
-    document.body.toggleAttribute('data-theme', 'dark');
-});
 
-document.getElementById('live-chat-btn').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function() {
+    // Automatically show the Drift chat widget
     if (typeof drift !== 'undefined') {
-        drift.show(); // Show Drift chat widget
+        drift.on('ready', function() {
+            drift.show();
+        });
     }
-});
 
+    // Function to show the corresponding page and hide others
+    window.showPage = function(pageId) {
+        var pages = document.querySelectorAll('.page');
+        pages.forEach(function(page) {
+            page.style.display = 'none';
+        });
+        document.getElementById(pageId).style.display = 'block';
+    };
+
+    // Default page to show
+    showPage('home');
+});
 
 
 
