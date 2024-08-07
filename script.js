@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const themeToggleBtn = document.querySelector("#theme-toggle-btn");
     const body = document.body;
 
+    // Toggle sidebar open/closed state
     toggleBtn.addEventListener("click", () => {
         sidebar.classList.toggle("closed");
     });
 
+    // Toggle between light and dark themes
     themeToggleBtn.addEventListener("click", () => {
         if (body.getAttribute("data-theme") === "dark") {
             body.setAttribute("data-theme", "light");
@@ -17,11 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
             themeToggleBtn.innerHTML = "<i class='bx bx-sun icon'></i><span class='text'>Light Mode</span>";
         }
     });
-});
 
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Automatically show the Drift chat widget
+    // Automatically show the Drift chat widget if available
     if (typeof drift !== 'undefined') {
         drift.on('ready', function() {
             drift.show();
@@ -40,8 +39,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Default page to show
     showPage('home');
 });
-
-
-
-
-
