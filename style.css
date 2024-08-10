@@ -446,16 +446,10 @@ header.image.text {
 }
 
 @media (max-width: 768px) {
-    .sidebar {
-        width: 50px; /* Even smaller on mobile */
-    }
-
-    .sidebar.open {
-        width: 200px; /* Adjusted for better fit on mobile */
-    }
+ 
 
     .content {
-        margin-left: 50px;
+        margin-left: 80px;
         width: calc(100% - 50px);
     }
 
