@@ -20,7 +20,7 @@ function loadContent(contentId) {
     <div class="text-container">
         <!-- Add your picture here -->
         <div class="welcome-section">
-            <img src="./img/image.png" alt="Your Picture" class="welcome-picture">
+            <img src="image.png" alt="Your Picture" class="welcome-picture">
             <div class="welcome-text-container">
                 <h1 class="welcome-text">Welcome to <span class="highlight">AFIQ CODING LAB</span></h1>
                 <h2 class="dis">Your Destination for <span class="typing">Innovative Solutions</span></h2>
