@@ -2,7 +2,7 @@
 let sidebar = document.querySelector(".sidebar");
 let toggleBtn = document.querySelector("#toggle-btn");
 toggleBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("closed");
+    sidebar.classList.toggle("open");
 });
 
 // Dynamic Content Loading
@@ -93,10 +93,10 @@ themeToggleBtn.addEventListener("click", () => {
     if (body.getAttribute("data-theme") === "dark") {
         body.removeAttribute("data-theme");
         themeIcon.classList.replace('bx-sun', 'bx-moon');
-        themeText.textContent = "Dark Mode";
+       
     } else {
         body.setAttribute("data-theme", "dark");
         themeIcon.classList.replace('bx-moon', 'bx-sun');
-        themeText.textContent = "Light Mode";
+        
     }
 });
