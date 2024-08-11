@@ -100,6 +100,109 @@ document.addEventListener("DOMContentLoaded", () => {
                             </div>
                         </div>
                     </section>
+                    <section class="skills-section">
+    <div class="skills-container">
+        <h2 class="section-title">Our Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class='bx bx-code-alt'></i>
+                </div>
+                <h3 class="skill-title">Web Development</h3>
+                <p class="skill-description">Crafting beautiful and functional websites.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+                
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class='bx bx-brush'></i>
+                </div>
+                <h3 class="skill-title">UI/UX Design</h3>
+                <p class="skill-description">Designing user-friendly interfaces.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class='bx bx-data'></i>
+                </div>
+                <h3 class="skill-title">Data Analysis</h3>
+                <p class="skill-description">Turning data into actionable insights.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class='bx bx-mobile'></i>
+                </div>
+                <h3 class="skill-title">Mobile Development</h3>
+                <p class="skill-description">Creating responsive mobile applications.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="projects-section">
+    <div class="projects-container">
+        <h2 class="section-title">Our Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="image.png" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h3 class="project-title">Project Title 1</h3>
+                    <p class="project-description">Brief description of the project with key highlights.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tag1</span>
+                        <span class="tag">Tag2</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image.png" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h3 class="project-title">Project Title 1</h3>
+                    <p class="project-description">Brief description of the project with key highlights.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tag1</span>
+                        <span class="tag">Tag2</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image.png" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h3 class="project-title">Project Title 1</h3>
+                    <p class="project-description">Brief description of the project with key highlights.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tag1</span>
+                        <span class="tag">Tag2</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat project-card divs for more projects -->
+        </div>
+    </div>
+</section>
                 `;
                 break;
             case "about":
@@ -157,30 +260,152 @@ document.addEventListener("DOMContentLoaded", () => {
                             </div>
                         </div>
                     </section>
+                    
                 `;
                 break;
             case "skills":
                 content = `
-                    <section class="page skills-section" id="skills">
-                        <h1>Our Skills</h1>
-                        <p>Explore the skills we offer in coding and development.</p>
-                    </section>
+                    <section class="skills-section">
+    <div class="skills-container">
+        <h2 class="section-title">Our Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class='bx bx-code-alt'></i>
+                </div>
+                <h3 class="skill-title">Web Development</h3>
+                <p class="skill-description">Crafting beautiful and functional websites.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;">
+                        <span class="progress-text">90%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class='bx bx-brush'></i>
+                </div>
+                <h3 class="skill-title">UI/UX Design</h3>
+                <p class="skill-description">Designing user-friendly interfaces.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;">
+                        <span class="progress-text">85%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class='bx bx-data'></i>
+                </div>
+                <h3 class="skill-title">Data Analysis</h3>
+                <p class="skill-description">Turning data into actionable insights.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;">
+                        <span class="progress-text">80%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class='bx bx-mobile'></i>
+                </div>
+                <h3 class="skill-title">Mobile Development</h3>
+                <p class="skill-description">Creating responsive mobile applications.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;">
+                        <span class="progress-text">75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
                 `;
                 break;
             case "projects":
                 content = `
-                    <section class="page projects-section" id="projects">
-                        <h1>Projects</h1>
-                        <p>Take a look at some of our recent projects.</p>
-                    </section>
+                    <section class="projects-section">
+    <div class="projects-container">
+        <h2 class="section-title">Our Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="image.png" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h3 class="project-title">Project Title 1</h3>
+                    <p class="project-description">Brief description of the project with key highlights.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tag1</span>
+                        <span class="tag">Tag2</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image.png" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h3 class="project-title">Project Title 1</h3>
+                    <p class="project-description">Brief description of the project with key highlights.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tag1</span>
+                        <span class="tag">Tag2</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="image.png" alt="Project Image" class="project-image">
+                <div class="project-details">
+                    <h3 class="project-title">Project Title 1</h3>
+                    <p class="project-description">Brief description of the project with key highlights.</p>
+                    <div class="project-tags">
+                        <span class="tag">Tag1</span>
+                        <span class="tag">Tag2</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Project</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat project-card divs for more projects -->
+        </div>
+    </div>
+</section>
+
                 `;
                 break;
             case "contact":
                 content = `
-                    <section class="page contact-section" id="contact">
-                        <h1>Contact Us</h1>
-                        <p>Get in touch with AFIQ CODING LAB.</p>
-                    </section>
+                    <section class="contact-section" id="contact">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
                 `;
                 break;
             default:

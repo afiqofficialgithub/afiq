@@ -683,3 +683,379 @@ header.image.text {
     
     
 }
+/* Base styles for the skills section */
+.skills-section {
+    padding: 60px 20px;
+    background: var(--primary-color-light);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title:after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Grid styling for skills cards */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styles for individual skill cards */
+.skill {
+    background: var(--card-bg-color);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.skill-title {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.skill-description {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.skills-section .skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.skills-section .section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.skills-section .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skills-section .skill {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+}
+
+.skills-section .skill-icon {
+    font-size: 3em;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.skills-section .skill-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.skills-section .skill-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.skills-section .progress-bar {
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 10px;
+    position: relative;
+}
+
+.skills-section .progress-bar .progress {
+    background-color: #3498db;
+    height: 100%;
+    position: relative;
+    transition: width 0.4s ease;
+}
+
+.skills-section .progress-text {
+    position: absolute;
+    right: 10px;
+    top: -25px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.progress-bar {
+    background: var(--progress-bar-bg);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--progress-bar-fill);
+    transition: width 0.3s ease;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .skills-section {
+    background: var(--sidebar-color-dark);
+    color: var(--text-color-dark);
+}
+
+[data-theme="dark"] .skill {
+    background: var(--card-bg-color-dark);
+}
+
+[data-theme="dark"] .section-title {
+    color: var(--primary-color-light);
+}
+
+[data-theme="dark"] .skill-icon {
+    color: var(--primary-color-light);
+}
+
+[data-theme="dark"] .skill-title {
+    color: var(--primary-color-light);
+}
+
+[data-theme="dark"] .skill-description {
+    color: var(--text-color-light);
+}
+
+[data-theme="dark"] .progress-bar {
+    background: var(--progress-bar-bg-dark);
+}
+
+[data-theme="dark"] .progress {
+    background: var(--progress-bar-fill-dark);
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .skills-section {
+    background: var(--primary-color-light);
+    color: var(--text-color);
+}
+
+[data-theme="light"] .skill {
+    background: var(--card-bg-color-light);
+}
+
+[data-theme="light"] .section-title {
+    color: var(--primary-color);
+}
+
+[data-theme="light"] .skill-icon {
+    color: var(--primary-color);
+}
+
+[data-theme="light"] .skill-title {
+    color: var(--primary-color);
+}
+
+[data-theme="light"] .skill-description {
+    color: var(--text-color);
+}
+
+[data-theme="light"] .progress-bar {
+    background: var(--progress-bar-bg);
+}
+
+[data-theme="light"] .progress {
+    background: var(--progress-bar-fill);
+}
+
+/* Base styles for the projects section */
+.projects-section {
+    padding: 60px 20px;
+    background: var(--primary-color-light);
+    color: var(--text-color);
+    text-align: center;
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-title:after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Grid styling for project cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styles for individual project cards */
+.project-card {
+    background: var(--sidebar-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    margin-bottom: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.project-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: var(--cta-btn-bg-color);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .projects-section {
+    background: var(--sidebar-color);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .project-card {
+    background: var(--sidebar-color-dark);
+}
+
+[data-theme="dark"] .project-title {
+    color: var(--primary-color-light);
+}
+
+[data-theme="dark"] .tag {
+    background-color: var(--primary-color-dark);
+    color: var(--primary-color-light);
+}
+
+[data-theme="dark"] .project-links a {
+    color: var(--primary-color-light);
+}
+
+[data-theme="dark"] .project-links a:hover {
+    color: var(--cta-btn-bg-color-dark);
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .projects-section {
+    background: var(--primary-color-light);
+    color: var(--text-color);
+}
+
+[data-theme="light"] .project-card {
+    background: var(--sidebar-color);
+}
+
+[data-theme="light"] .project-title {
+    color: var(--primary-color);
+}
+
+[data-theme="light"] .tag {
+    background-color: var(--primary-color-light);
+    color: var(--primary-color);
+}
+
+[data-theme="light"] .project-links a {
+    color: var(--primary-color);
+}
+
+[data-theme="light"] .project-links a:hover {
+    color: var(--cta-btn-bg-color);
+}
