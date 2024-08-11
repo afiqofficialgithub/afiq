@@ -79,12 +79,13 @@ body {
 }
 
 .sidebar.open {
-    
+    transition: var(--tran-05);
     height: 100%;
     width: 250px;
 }
 
 .sidebar .image img {
+    margin: 15%;
     width: 40px;
     border-radius: 10%;
 }
@@ -95,9 +96,13 @@ body {
 }
 
 .sidebar .texts {
-    margin-left: 10px;
+    margin-left: 18px;
+    transform: var(--tran-05);
 }
-
+.sidebar .open ~ .texts {
+    
+    transform: var(--tran-05);
+}
 .sidebar .log-name {
     display: none;
 }
@@ -121,7 +126,7 @@ header.image.text {
 
 .sidebar.open .log-name {
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--primary-color);
     text-transform: uppercase;
@@ -129,7 +134,8 @@ header.image.text {
     background: linear-gradient(90deg, rgba(105,92,254,1) 0%, rgba(129,202,244,1) 50%, rgba(105,92,254,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient-animation 3s ease-in-out infinite;
+    
+    
 }
 
 .sidebar header .arr {
@@ -163,18 +169,19 @@ header.image.text {
 }
 
 .sidebar li {
-    
     height: 50px;
     margin-top: 10px;
-    align-items: center;
     display: flex;
+    align-items: center;
+    justify-content: center; /* Center items horizontally */
 }
 
 .sidebar li .icon {
     font-size: 35px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    
+    margin: 10%; /* Adjust as necessary */
 }
 
 .sidebar li a {
@@ -259,8 +266,8 @@ header.image.text {
 
 /* Base content styling for when sidebar is closed */
 .content {
-    margin-left: 80px;
-    width: calc(100% - 80px);
+    margin-left: 95px;
+    width: calc(100% - 95px);
     transition: var(--tran-05);
 }
 
@@ -292,7 +299,11 @@ header.image.text {
     height: 100vh;
     position: relative;
     text-align: center;
-    padding: 0 20px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--primary-color-light) 0%, var(--secondary-color-light) 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
 }
 
 .home-bg {
@@ -363,7 +374,7 @@ header.image.text {
 }
 
 .cta-btn:hover {
-    background-color: var(--primary-color-light);
+    background-color: var(--text-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -445,26 +456,224 @@ header.image.text {
     text-align: center;
 }
 
+
+.about-section {
+    padding: 40px;
+    background: linear-gradient(135deg, var(--primary-color-light) 0%, var(--secondary-color-light) 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+/* Team Intro */
+.team-intro h1 {
+    font-size: 36px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.team-intro p {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Mission Statement */
+.mission-statement h2 {
+    font-size: 30px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.mission-statement p {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* Team Section */
+.team h2 {
+    font-size: 30px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.team-members {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    background: linear-gradient(135deg, var(--sidebar-color) 0%, var(--sidebar-color-light) 100%);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, var(--sidebar-color-light) 0%, var(--sidebar-color) 100%);
+}
+
+.team-member-picture {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Milestones */
+.milestones h2 {
+    font-size: 30px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.milestones ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.milestones li {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.milestones li::before {
+    content: '📍';
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+/* Testimonials */
+.testimonials h2 {
+    font-size: 30px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.testimonial {
+    background: linear-gradient(135deg, var(--sidebar-color) 0%, var(--sidebar-color-light) 100%);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial::before {
+    content: '“';
+    font-size: 50px;
+    color: var(--primary-color);
+    position: absolute;
+    top: -15px;
+    left: 15px;
+}
+
+.testimonial::after {
+    content: '”';
+    font-size: 50px;
+    color: var(--primary-color);
+    position: absolute;
+    bottom: -15px;
+    right: 15px;
+}
+
+.testimonial p {
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+.sidebar.open ~ .content {
+    margin-left: 220px; /* Adjust as needed to match your design */
+    width: calc(100% - 220px); /* Ensure the content width adjusts properly */
+    margin-top: 20px;
+}
+.testimonial:hover {
+    background: linear-gradient(135deg, var(--sidebar-color-light) 0%, var(--sidebar-color) 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+
 @media (max-width: 768px) {
- 
+    .sidebar {
+        z-index: 1000; /* Ensures the sidebar stays on top */
+   
+    }
 
     .content {
         margin-left: 80px;
-        width: calc(100% - 50px);
+        width: calc(100% - 80px);
     }
 
+    /* Content settings when sidebar is open */
     .sidebar.open ~ .content {
-        margin-left: 280px;
-        width: calc(100% - 200px);
+        margin-left: 0;
+        width: 100%;
+        position: relative;
+        
+    }
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .welcome-text {
-        font-size: 32px;
+        font-size: 29px;
     }
     .typing {
-        font-size: 24px;
+        font-size: 20px;
     }
     .cta-btn {
         font-size: 16px;
